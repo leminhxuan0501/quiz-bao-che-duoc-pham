@@ -349,9 +349,9 @@
   <div class="answer-overlay" id="answer-overlay" role="dialog" aria-modal="true" aria-labelledby="answer-overlay-title" aria-describedby="answer-overlay-message" hidden>
     <div class="answer-overlay-card">
       <div class="answer-overlay-icon" aria-hidden="true">💡</div>
-      <h2 id="answer-overlay-title">bạn có làm được việc không?</h2>
-      <p id="answer-overlay-message">vl câu này mà cũng cần xem à, non</p>
-      <button class="answer-overlay-close" id="answer-overlay-close" type="button">chịu chịu chịu</button>
+      <h2 id="answer-overlay-title">Cố lên, thử lại nhé!?</h2>
+      <p id="answer-overlay-message">Không sao, cùng xem đáp án rồi thử sức câu tiếp theo nhé!</p>
+      <button class="answer-overlay-close" id="answer-overlay-close" type="button">Đã hiểu, xem đáp án</button>
     </div>
   </div>
 
@@ -379,13 +379,13 @@
 
     // Các câu khịa khi trả lời sai
     const wrongAnswerTaunts = [
-      "bạn có làm được việc không",
-      "có thế mà cũng sai à",
-      "vl chịu bố",
-      "câu này sai được thì bầu mẹ đi",
-      "wtf dễ thế cũng sai",
-      "thôi thôi làm nữa càng nhục",
-      "Bộ não để trưng cho đẹp đội hình à hay gì?",
+      "Cố lên, thử lại nhé!",
+      "Sai một chút thôi, thử lại nào!",
+      "Chưa trúng rồi, bình tĩnh nhé.",
+      "Đọc kỹ câu hỏi thêm một lần nhé.",
+      "Gần đúng rồi, chọn lại nào.",
+      "Tiếp tục luyện tập để tiến bộ nhé.",
+      "Thử đọc lại dữ kiện rồi chọn lại nhé.",
       "Đến con lật đật ngã lên ngã xuống còn chọn chuẩn hơn bạn.",
       "Hỏi thật, từ lúc sinh ra đến giờ bạn đã dùng não lần nào chưa?",
       "Bào chế thuốc chữa bệnh hay thuốc tống táng người ta thế hả?",
@@ -631,8 +631,8 @@
           }
           render();
           if (!previewed) {
-            document.getElementById("answer-overlay-title").textContent = "bạn có làm được việc không?";
-            document.getElementById("answer-overlay-message").textContent = "vl câu này mà cũng cần xem à, non";
+            document.getElementById("answer-overlay-title").textContent = "Cố lên, thử lại nhé!?";
+            document.getElementById("answer-overlay-message").textContent = "Không sao, cùng xem đáp án rồi thử sức câu tiếp theo nhé!";
             openAnswerOverlay(document.getElementById("reveal-button"));
           }
         });
