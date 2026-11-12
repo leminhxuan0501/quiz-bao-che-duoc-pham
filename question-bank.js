@@ -7,7 +7,8 @@
     { name: "Hệ tiểu phân micro, nano và liposome", description: "Cấu trúc, thành phần, phương pháp bào chế và ứng dụng." },
     { name: "Thuốc phun mù", description: "Thành phần, chất đẩy, phương pháp đóng thuốc và kiểm soát chất lượng." },
     { name: "Tương kỵ trong bào chế", description: "Phân loại, cơ chế, ví dụ và biện pháp khắc phục." },
-    { name: "Thuốc mỡ", description: "Các dạng thuốc mềm, tá dược, kỹ thuật bào chế, chất lượng và hấp thu qua da." }
+    { name: "Thuốc mỡ", description: "Các dạng thuốc mềm, tá dược, kỹ thuật bào chế, chất lượng và hấp thu qua da." },
+    { name: "Nâng cao – Vận dụng", description: "64 tình huống áp dụng kiến thức tổng hợp từ cả 8 chủ đề." }
   ];
 
   // Each fact creates a forward and a reverse matching question.
@@ -474,6 +475,93 @@
         text: `Mô tả sau đây gắn với thành phần, khái niệm hoặc phương pháp nào trong nhóm ${category}: “${detail}”?`,
         ...reverse
       });
+    });
+  });
+
+  const advancedQuestionDrafts = [
+    { text: "Khuôn chứa 2 g bơ cacao mỗi viên. Mỗi viên cần 0,2 g dược chất, hệ số thay thế E = 0,5. Bỏ qua hao hụt, lượng tá dược cần cho 10 viên là bao nhiêu?", options: ["20 g", "18 g", "16 g", "14 g"], correctIndex: 2 },
+    { text: "Một dược chất tan trong nước được bào chế bằng nền bơ cacao nhưng giải phóng chậm vào niêm dịch. Thay đổi nào phù hợp nhất với mục tiêu tăng giải phóng?", options: ["Chuyển sang nền PEG thân nước", "Tăng tỷ lệ bơ cacao", "Thêm parafin rắn", "Tăng độ nhớt của nền dầu"], correctIndex: 0 },
+    { text: "Dược chất rắn không tan có khối lượng 0,08 g mỗi viên, lớn hơn ngưỡng 0,05 g trong bài giảng. Khi tính lượng nền đổ khuôn, cần làm gì?", options: ["Cộng nguyên khối lượng dược chất vào lượng nền", "Bỏ qua thể tích dược chất vì thuốc không tan", "Dùng hệ số thay thế để tính lượng nền bị chiếm chỗ", "Chỉ tính hệ số thay thế khi dược chất tan"], correctIndex: 2 },
+    { text: "Trong lúc đổ khuôn, hỗn hợp thuốc đặt để lâu khiến dược chất lắng và phân lớp. Cách thao tác nào giúp hạn chế lỗi này?", options: ["Đợi tá dược đông hoàn toàn rồi mới đổ", "Đổ liên tục khi tá dược còn lỏng và duy trì phân tán đồng đều", "Chỉ rót phần trong phía trên", "Tăng thời gian để nguội trước khi phối hợp dược chất"], correctIndex: 1 },
+    { text: "Muốn thuốc đặt trực tràng tránh một phần chuyển hóa bước đầu qua gan, vùng dẫn lưu nào thuận lợi hơn?", options: ["Tĩnh mạch trực tràng trên", "Tĩnh mạch cửa", "Tĩnh mạch trực tràng giữa và dưới", "Động mạch trực tràng trên"], correctIndex: 2 },
+    { text: "Dược chất nhạy nhiệt nhưng tan được trong tá dược đặt. Để hạn chế phân hủy khi dùng phương pháp hòa tan, nên chọn cách nào?", options: ["Hòa tan ở nhiệt độ cao nhất có thể", "Hòa tan nóng và để hở đến khi nguội", "Trộn dược chất vào khuôn đã đông", "Ưu tiên hòa tan ở điều kiện nguội phù hợp"], correctIndex: 3 },
+    { text: "Một dược chất ít tan được phân tán trong nền béo và có xu hướng vón thành cụm. Bước nào cải thiện độ đồng nhất trước khi phối hợp toàn bộ tá dược?", options: ["Nghiền mịn, làm ướt/trộn với một phần tá dược rồi thêm dần phần còn lại", "Rây nguyên liệu sau khi đã đóng khuôn", "Đổ toàn bộ tá dược nóng lên bột cùng một lần", "Tăng kích thước tiểu phân để chúng lắng nhanh"], correctIndex: 0 },
+    { text: "Một mẫu thuốc đặt tan chậm trong thử nghiệm có niêm dịch độ nhớt cao. Yếu tố nào giải thích trực tiếp hiện tượng này?", options: ["Niêm dịch nhớt làm tăng tốc độ khuếch tán", "Niêm dịch nhớt có thể làm dược chất khuếch tán chậm", "Độ nhớt chỉ ảnh hưởng màu sắc", "Niêm dịch nhớt làm giảm khối lượng viên"], correctIndex: 1 },
+
+    { text: "Một bột dược chất siêu mịn dưới 10 µm chảy kém, làm khối lượng phân liều dao động. Biện pháp nào phù hợp nhất?", options: ["Nghiền mịn hơn nữa", "Tăng kích thước tiểu phân hoặc tạo hạt, có thể phối hợp tá dược điều hòa chảy", "Tăng lực nén khi đóng gói", "Thêm nước đến khi bột kết dính"], correctIndex: 1 },
+    { text: "Cần phân tán đồng đều một dược chất mạnh có liều rất nhỏ trong lượng lớn tá dược bột. Nên áp dụng kỹ thuật nào?", options: ["Trộn đồng lượng theo cấp số nhân", "Đổ toàn bộ tá dược vào trước rồi rắc dược chất lên mặt", "Trộn riêng phần bột lớn nhất trước", "Rây hỗn hợp sau khi đã đóng gói"], correctIndex: 0 },
+    { text: "Hỗn hợp menthol và long não hóa lỏng sau khi nghiền chung. Nhận định và cách xử lý nào đúng?", options: ["Do tạo phức không tan; thêm nước để hòa tan", "Do hút ẩm; sấy nóng hỗn hợp", "Do hỗn hợp eutectic; cân nhắc gói riêng hoặc bao bằng bột trơ", "Do lực tĩnh điện; tăng độ mịn"], correctIndex: 2 },
+    { text: "Khi bào chế bột có tinh dầu, quy trình nào giúp hạn chế thất thoát hoạt chất dễ bay hơi?", options: ["Thêm tinh dầu đầu tiên rồi nghiền kéo dài", "Thêm tinh dầu sau cùng, trộn nhanh và đóng gói kín", "Sấy hỗn hợp ở nhiệt độ cao sau khi thêm tinh dầu", "Để hở hỗn hợp đến khi hết mùi"], correctIndex: 1 },
+    { text: "Một dược chất nhạy với nhiệt và ẩm nhưng hỗn hợp bột có tính chất phù hợp để dập. Hướng xử lý nào giảm tiếp xúc với hai yếu tố này?", options: ["Tạo hạt ướt rồi sấy nóng", "Tăng lượng nước tạo hạt", "Ưu tiên quy trình khô như tạo hạt khô hoặc dập thẳng nếu tính chất cho phép", "Ngâm bột trong dung môi trước khi sấy"], correctIndex: 2 },
+    { text: "Bột chứa thành phần háo ẩm bị vón trong quá trình pha chế. Tổ hợp biện pháp nào phù hợp?", options: ["Thao tác trong môi trường ẩm và để hở", "Làm khô dụng cụ, thao tác nhanh và đóng gói chống ẩm", "Thêm nước để phá vón rồi bảo quản", "Tăng thời gian nghiền ngoài không khí"], correctIndex: 1 },
+    { text: "Khối dẻo dùng đùn-tạo cầu pellet bị dính vào thiết bị và biến dạng. Nguyên nhân cần ưu tiên xem xét là gì?", options: ["Khối dẻo quá ẩm", "Khối dẻo quá khô", "Tỷ lệ bột bay bụi quá cao", "Cỡ rây của bao bì quá nhỏ"], correctIndex: 0 },
+    { text: "Lô cốm có độ ẩm 6%, trong khi yêu cầu theo bài giảng không quá 5%. Kết luận kiểm soát chất lượng nào phù hợp?", options: ["Đạt vì giới hạn cốm là dưới 9%", "Đạt nếu cốm có màu đồng nhất", "Không đạt chỉ tiêu độ ẩm, cần xử lý/đánh giá lại trước khi đóng gói", "Không cần kiểm tra vì cốm đã được sấy"], correctIndex: 2 },
+
+    { text: "Khối bột cần đóng nang có khối lượng 0,34 g và khối lượng riêng 0,5 g/cm³. Thể tích ước tính là 0,68 cm³; theo bảng trong slide, nang cỡ số 0 có thể tích khoảng 0,68 cm³. Cỡ nào phù hợp nhất về thể tích?", options: ["Cỡ số 5", "Cỡ số 0", "Không thể chọn cỡ nang bằng thể tích", "Cỡ số 4"], correctIndex: 1 },
+    { text: "Bột đóng nang chảy không đều, gây sai lệch lượng thuốc giữa các nang. Biện pháp nào có thể cải thiện đặc tính khối bột?", options: ["Tạo hạt để cải thiện độ chảy và tăng tỷ trọng", "Tăng lực đóng nắp", "Giảm kích thước nang mà không sửa bột", "Tăng độ ẩm vỏ nang"], correctIndex: 0 },
+    { text: "Một chế phẩm dạng dầu cần phân liều kín, vỏ nang và khối thuốc được tạo đồng thời. Dạng nang nào phù hợp?", options: ["Nang cứng gelatin", "Nang mềm", "Viên nén bao phim", "Pellet không bao"], correctIndex: 1 },
+    { text: "Công thức nang mềm dùng dung môi thân nước. Tỷ lệ chất hóa dẻo/gelatin nào nằm trong khoảng nêu ở slide?", options: ["0,1–0,2", "0,3–0,5", "0,6–1,0", "1,5–2,0"], correctIndex: 2 },
+    { text: "Pha thuốc đóng nang mềm có pH 8 và cần gia nhiệt đến 40°C. Điều chỉnh nào đưa quy trình về giới hạn nêu trong bài giảng?", options: ["Giữ pH 8, chỉ giảm nhiệt độ", "Đưa pH về khoảng 2,5–7,5 và giữ nhiệt độ dưới 35°C", "Tăng nhiệt lên trên 45°C", "Thêm nước đến khi pH tự giảm"], correctIndex: 1 },
+    { text: "Dược chất sơ nước trong bột đóng nang khó thấm ướt. Tá dược nào được nêu có thể dùng làm chất gây thấm?", options: ["Natri lauryl sulfat", "Parafin rắn", "Titan dioxyd", "Sáp ong"], correctIndex: 0 },
+    { text: "Sau thời gian bảo quản, nang chứa aspirin có thời gian rã kéo dài. Giải thích nào cần được xem xét theo bài giảng?", options: ["Aspirin làm vỏ nang mềm hơn nên rã chậm", "Aspirin có thể làm cứng vỏ nang và kéo dài thời gian rã", "Nang cứng luôn không rã trong môi trường acid", "Khối lượng nang giảm làm vỏ dày lên"], correctIndex: 1 },
+    { text: "Muốn đưa một viên nén nhỏ vào nang cứng, đặc tính nào phù hợp theo slide?", options: ["Đường kính trên 5 mm và hai mặt phẳng", "Đường kính dưới 3 mm, mặt cong và có thể bao", "Viên phải hút ẩm mạnh", "Viên phải lớn hơn thể tích vỏ nang"], correctIndex: 1 },
+
+    { text: "Dược chất viên nén nhạy nhiệt và ẩm, nhưng khối bột cần tăng độ chảy. Quy trình nào thường phù hợp hơn tạo hạt ướt?", options: ["Tạo hạt khô nếu nguyên liệu cho phép", "Tăng lượng tá dược dính lỏng", "Ngâm bột rồi sấy ở nhiệt độ cao", "Kéo dài thời gian tạo hạt ướt"], correctIndex: 0 },
+    { text: "Viên cần rã nhanh để hỗ trợ giải phóng dược chất. Tá dược nào phù hợp nhất với mục tiêu này?", options: ["Ethyl cellulose làm màng kéo dài", "Tá dược siêu rã", "Magnesi stearat ở tỷ lệ cao", "Sáp ong"], correctIndex: 1 },
+    { text: "Một dược chất có nhóm amin được phối hợp với lactose và xuất hiện dấu hiệu không tương hợp. Hướng xử lý nào hợp lý?", options: ["Tăng lactose để pha loãng tương kỵ", "Đổi lactose sang tá dược độn phù hợp khác sau khi đánh giá tương hợp", "Tăng magnesi stearat", "Bao viên bằng HPMC mà không đổi công thức"], correctIndex: 1 },
+    { text: "Viên có độ rã và hòa tan chậm sau khi tăng lượng magnesi stearat. Nguyên nhân phù hợp nhất là gì?", options: ["Tá dược trơn làm tăng thấm ướt", "Tá dược trơn có thể cản thấm ướt khi dùng quá mức", "Magnesi stearat làm tăng độ tan của mọi dược chất", "Magnesi stearat tạo lỗ xốp trong viên"], correctIndex: 1 },
+    { text: "Dược chất cần hạn chế giải phóng trong dạ dày. Vật liệu bao nào phù hợp với mục tiêu bao tan ở ruột?", options: ["HPMCP", "HPMC dùng làm màng bảo vệ thông thường", "Talc đơn độc", "Lactose"], correctIndex: 0 },
+    { text: "Công thức được thiết kế để giải phóng kéo dài từ màng bao. Polymer nào được nêu có thể dùng cho mục đích này?", options: ["Ethyl cellulose", "Lactose", "Tinh bột", "Natri croscarmellose"], correctIndex: 0 },
+    { text: "Hỗn hợp bột dập viên phân lớp và chảy kém trước khi nén. Mục đích chính của việc tạo hạt là gì?", options: ["Tăng phân lớp và giảm liên kết", "Cải thiện độ chảy, giảm phân lớp và tăng liên kết tiểu phân", "Làm viên không cần kiểm nghiệm", "Tăng độ ẩm của viên thành phẩm"], correctIndex: 1 },
+    { text: "Một lô viên đạt độ bền cơ học nhưng chưa có kết quả giải phóng dược chất. Bước đánh giá nào vẫn cần thiết để kiểm tra hiệu năng hòa tan?", options: ["Chỉ kiểm tra màu viên", "Thử độ hòa tan trong môi trường thử", "Đo kích thước bao bì", "Kiểm tra mùi tá dược"], correctIndex: 1 },
+
+    { text: "Dược chất thân nước cần được bao gói trong liposome. Vị trí nào phù hợp nhất trong cấu trúc?", options: ["Ngăn nước bên trong liposome", "Lõi cholesterol rắn", "Bề mặt ngoài của bao bì", "Chỉ nằm trong màng lipid kép"], correctIndex: 0 },
+    { text: "Một dược chất thân dầu được nạp vào liposome. Vị trí phân bố phù hợp nhất là đâu?", options: ["Ngăn nước", "Lớp lipid kép", "Pha nước bên ngoài duy nhất", "Vỏ polymer của nang cứng"], correctIndex: 1 },
+    { text: "Liposome quy ước bị đại thực bào nhận biết và thanh thải nhanh. Thiết kế nào có thể làm chậm thanh thải theo bài giảng?", options: ["Tăng bề mặt polymer thân nước", "Loại bỏ hoàn toàn màng lipid", "Tăng kích thước đến hàng milimet", "Thay bằng bột không bao"], correctIndex: 0 },
+    { text: "Hệ mang cần nhận biết receptor đặc trưng tại mô đích. Loại liposome nào phù hợp với thiết kế gắn kháng thể?", options: ["Liposome quy ước", "Liposome miễn dịch", "Niosome", "Proliposome"], correctIndex: 1 },
+    { text: "Mục tiêu là giải phóng dược chất khi nhiệt độ vùng đích đạt khoảng 39–43°C. Hệ nào được thiết kế cho mục tiêu này?", options: ["Liposome nhạy cảm nhiệt", "Lipoplex", "Virosome", "Micell không đáp ứng nhiệt"], correctIndex: 0 },
+    { text: "Sau khi tạo liposome, kích thước tiểu phân chưa đồng đều và cần giảm kích thước. Phương pháp nào phù hợp?", options: ["Ép đùn qua màng hoặc siêu âm", "Tăng thời gian bảo quản", "Thêm chất hóa dẻo vào vỏ gelatin", "Rây khô qua rây 2 mm"], correctIndex: 0 },
+    { text: "Một công thức dùng chất diện hoạt không ion hóa thay cho phospholipid để tạo hệ túi. Hệ nào phù hợp nhất?", options: ["Liposome", "Niosome", "Lipoplex", "Vi cầu"], correctIndex: 1 },
+    { text: "Khi lọc tiệt khuẩn liposome qua màng 0,22 µm, yếu tố nào cần được xác nhận trước?", options: ["Kích thước liposome phải phù hợp để đi qua màng", "Màu sắc của màng lọc", "Khối lượng bao bì bên ngoài", "Độ cứng vỏ nang"], correctIndex: 0 },
+
+    { text: "Một chế phẩm phun mù dùng đường hít cần đưa tiểu phân đến vùng phế nang. Kích thước nào phù hợp nhất theo slide?", options: ["40–50 µm", "Trên 100 µm", "1–5 µm", "Dưới 0,1 µm"], correctIndex: 2 },
+    { text: "Người bệnh thường thấy nhiều thuốc đọng ở đường hô hấp trên; phép đo cho thấy phần lớn tiểu phân lớn hơn 10 µm. Hướng điều chỉnh nào phù hợp?", options: ["Tăng thêm kích thước tiểu phân", "Điều chỉnh để tăng tỷ lệ tiểu phân trong khoảng 1–5 µm", "Chuyển toàn bộ thành hạt 40–50 µm", "Tăng đường kính lỗ đầu phun bọt"], correctIndex: 1 },
+    { text: "Một bình aerosol dùng khí nén có áp lực phun giảm dần khi sử dụng. Giải thích phù hợp nhất là gì?", options: ["Khí nén không duy trì cân bằng lỏng-hơi trong bình", "Khí nén luôn làm áp lực tăng dần", "Van định liều làm tăng lượng khí", "Kích thước giọt phun làm áp suất bằng không"], correctIndex: 0 },
+    { text: "Công thức dùng chất đẩy hóa lỏng cần duy trì áp suất tương đối ổn định trong quá trình sử dụng. Đặc điểm nào giúp đạt điều này?", options: ["Cân bằng giữa pha lỏng và pha hơi trong bình", "Khí chỉ tồn tại ở pha rắn", "Bình không có van", "Tăng kích thước tiểu phân thuốc"], correctIndex: 0 },
+    { text: "Một công thức phun mù có nguy cơ bắt lửa do dùng chất đẩy hydrocarbon. Chỉ tiêu nào cần được chú trọng khi đánh giá thành phẩm?", options: ["Độ bắt lửa và độ cháy", "Chỉ độ hòa tan của vỏ nang", "Độ xuyên sâu của thuốc mỡ", "Hệ số thay thế E"], correctIndex: 0 },
+    { text: "Cần tạo bọt xốp thay vì sương mù mịn. Đặc điểm đầu phun nào phù hợp hơn theo slide?", options: ["Lỗ mở nhỏ khoảng 0,4–1 mm", "Lỗ mở lớn hơn, khoảng 1,78–3,81 mm", "Không sử dụng đầu phun", "Chỉ dùng màng lọc 0,22 µm"], correctIndex: 1 },
+    { text: "Van định liều được dùng để đảm bảo lượng thuốc mỗi lần xịt. Chỉ tiêu nào trực tiếp đánh giá chức năng này?", options: ["Độ chính xác phân liều", "Độ dính của thuốc mỡ", "Độ ẩm vỏ nang mềm", "Góc nghỉ của bột"], correctIndex: 0 },
+    { text: "Một lô aerosol có áp suất đạt nhưng tốc độ phun và kích thước tiểu phân biến thiên giữa các bình. Cần kiểm tra thêm nhóm chỉ tiêu nào?", options: ["Độ kín, tốc độ phun và kích thước tiểu phân", "Chỉ độ bền gel", "Chỉ hàm lượng nước của vỏ nang", "Điểm đông đặc tá dược đặt"], correctIndex: 0 },
+
+    { text: "Menthol và long não hóa lỏng khi nghiền chung trong thuốc bột. Cách khắc phục nào phù hợp nhất?", options: ["Gói riêng hoặc bao từng chất bằng bột trơ", "Thêm acid để giải phóng khí", "Tăng nhiệt độ cho hỗn hợp bay hơi", "Thêm chất diện hoạt bất kỳ"], correctIndex: 0 },
+    { text: "Dung dịch keo bị đông vón sau khi thêm một điện giải mạnh. Cơ chế tương kỵ nào phù hợp nhất?", options: ["Phá vỡ trạng thái bền của hệ keo", "Tăng độ tan do tạo phức tan", "Tạo lớp bao polymer kéo dài", "Giảm kích thước nang"], correctIndex: 0 },
+    { text: "Khi phối hợp dung dịch carbonat với acid, bình chứa sinh khí. Sản phẩm khí nào cần dự đoán?", options: ["Oxy", "Carbon dioxide", "Nitơ", "Hydrogen"], correctIndex: 1 },
+    { text: "Muối alkaloid tạo kết tủa sau khi thêm kiềm mạnh. Nhận định nào giải thích hiện tượng?", options: ["Có thể tạo base alkaloid ít tan", "Kiềm làm mọi alkaloid tan tốt hơn", "Do tăng kích thước hạt pellet", "Do vỏ nang hấp thụ nước"], correctIndex: 0 },
+    { text: "Dung dịch vitamin C đổi màu nhanh khi tiếp xúc lâu với không khí và ánh sáng. Hướng giảm nguy cơ oxy hóa nào phù hợp?", options: ["Bổ sung chất chống oxy hóa phù hợp và hạn chế oxy, ánh sáng", "Tăng tiếp xúc với không khí", "Thêm chất oxy hóa mạnh", "Tăng pH bất kỳ"], correctIndex: 0 },
+    { text: "Một chế phẩm penicillin bị phân hủy trong môi trường acid. Biện pháp công thức nào cần ưu tiên đánh giá?", options: ["Tránh môi trường acid và lựa chọn pH/dạng bào chế phù hợp", "Tăng acid để ổn định", "Thêm tannin để kết tủa", "Tăng lượng nước tự do"], correctIndex: 0 },
+    { text: "Hàm lượng hoạt chất giảm nhưng chế phẩm không đổi màu, mùi hoặc trạng thái; công thức có than hoạt. Hiện tượng nào cần xem xét?", options: ["Hấp phụ gây tương kỵ ẩn", "Hỗn hợp eutectic", "Đông chảy của tá dược béo", "Tăng độ bền cơ học"], correctIndex: 0 },
+    { text: "Dược chất kết tủa sau khi thêm dung môi thứ hai dù ban đầu đã tan. Hướng xử lý nào hợp lý?", options: ["Đánh giá lại hệ dung môi và độ tan; cân nhắc đổi dung môi hoặc dạng hỗn dịch", "Tiếp tục thêm dung môi thứ hai không giới hạn", "Tăng tốc độ khuấy để biến tủa thành dung dịch", "Bỏ qua vì tủa không ảnh hưởng công thức"], correctIndex: 0 },
+
+    { text: "Thuốc mỡ chứa dược chất thân nước giải phóng chậm, đồng thời người dùng cần dễ rửa sạch chế phẩm. Nhóm tá dược nào phù hợp hơn?", options: ["Tá dược thân nước", "Hydrocarbon thân dầu", "Parafin rắn đơn độc", "Sáp ong đơn độc"], correctIndex: 0 },
+    { text: "Cần bào chế thuốc mỡ tra mắt có dược chất rắn không tan. Yêu cầu xử lý nguyên liệu nào đặc biệt quan trọng?", options: ["Nghiền mịn và đảm bảo không có tiểu phân dược chất lớn hơn 75 µm", "Giữ nguyên hạt thô để tránh lắng", "Chỉ hòa tan bằng cách đun sôi", "Bổ sung kim loại để tăng độ bền"], correctIndex: 0 },
+    { text: "Một hoạt chất dễ bay hơi được đưa vào thuốc mỡ bằng phương pháp hòa tan. Cách thao tác nào hạn chế thất thoát?", options: ["Hòa tan trong điều kiện kín", "Để cốc mở trong thời gian dài", "Đun nóng mạnh để tăng bay hơi", "Thêm hoạt chất trước khi cân tá dược"], correctIndex: 0 },
+    { text: "Dược chất cần giải phóng nhanh, dễ rửa sạch và tan tốt trong nước. Nhóm tá dược nào nên được cân nhắc trước?", options: ["Tá dược thân nước", "Hydrocarbon không hút nước", "Sáp ong", "Vaselin đơn độc"], correctIndex: 0 },
+    { text: "Một vùng da được băng kín sau khi bôi thuốc; hấp thu tăng ngoài dự kiến. Cơ chế nào phù hợp với bài giảng?", options: ["Bít kín làm tăng hydrat hóa lớp sừng và lipid", "Bít kín luôn làm giảm nước lớp sừng", "Bít kín làm mất hoàn toàn hàng rào da", "Băng kín chỉ ảnh hưởng màu thuốc"], correctIndex: 0 },
+    { text: "Công thức thuốc mỡ nhũ tương được gia nhiệt nhưng hai pha không đồng nhất. Quy trình nhiệt nào phù hợp với hướng dẫn trong slide?", options: ["Pha nước 70–75°C, pha dầu 65–70°C rồi phối hợp và đồng nhất hóa", "Pha nước 20°C, pha dầu 100°C", "Đun sôi cả hai pha rồi để riêng", "Chỉ gia nhiệt pha dầu và không khuấy"], correctIndex: 0 },
+    { text: "Một chế phẩm cần kiểm soát độ dàn mỏng, độ xuyên sâu và độ dính. Đây là nhóm đánh giá nào?", options: ["Đánh giá thể chất thuốc mỡ", "Đánh giá độ chính xác phân liều van", "Đánh giá độ ẩm vỏ nang", "Đánh giá tỷ số Hausner"], correctIndex: 0 },
+    { text: "Trẻ dưới 9 tháng tuổi có lớp sừng chưa phát triển đầy đủ. Khi đánh giá nguy cơ hấp thu thuốc bôi, cần lưu ý điều gì?", options: ["Có thể hấp thu nhiều hơn và tăng nguy cơ kích ứng hoặc ngộ độc", "Da luôn ngăn hấp thu hoàn toàn", "Bít kín luôn làm giảm hấp thu", "Tuổi không ảnh hưởng đến hấp thu qua da"], correctIndex: 0 }
+  ];
+
+  const advancedChapterIndex = chapters.length - 1;
+  advancedQuestionDrafts.forEach(draft => {
+    const optionOrder = shuffle([0, 1, 2, 3], hash(draft.text));
+    const options = optionOrder.map(index => draft.options[index]);
+    questions.push({
+      id: questions.length + 1,
+      chapter: advancedChapterIndex,
+      text: draft.text,
+      options,
+      answer: "ABCD"[optionOrder.indexOf(draft.correctIndex)]
     });
   });
 
