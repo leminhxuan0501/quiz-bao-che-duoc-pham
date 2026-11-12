@@ -293,11 +293,11 @@
         <div class="brand-mark" aria-hidden="true">Ả</div>
         <div>
           <h1>Ôn tập Bào chế dược phẩm</h1>
-          <p>Trắc nghiệm theo 7 chủ đề bài giảng</p>
+          <p>Trắc nghiệm theo 8 chủ đề bài giảng</p>
         </div>
       </div>
       <div class="topbar-actions">
-        <div class="total-pill" id="total-pill">602 câu hỏi</div>
+        <div class="total-pill" id="total-pill">740 câu hỏi</div>
         <button class="submit-button" id="submit-button" type="button">Nộp chương</button>
         <button class="restart-button" id="restart-button" type="button" hidden>Làm lại chương</button>
         <button class="restart-all-button" id="restart-all-button" type="button">Làm lại từ đầu</button>
@@ -330,7 +330,7 @@
 
       <main>
         <div class="notice" id="source-notice">
-          Bộ câu hỏi gồm khoảng 600 câu được biên soạn theo 7 bộ slide: thuốc đặt; thuốc bột, cốm và pellet; thuốc nang; viên nén; hệ tiểu phân micro, nano và liposome; thuốc phun mù; tương kỵ trong bào chế.
+          Bộ câu hỏi gồm 740 câu được biên soạn theo 8 bộ slide: thuốc đặt; thuốc bột, cốm và pellet; thuốc nang; viên nén; hệ tiểu phân micro, nano và liposome; thuốc phun mù; tương kỵ trong bào chế; thuốc mỡ.
         </div>
         <section class="chapter-header" aria-labelledby="chapter-title">
           <div>
@@ -349,9 +349,9 @@
   <div class="answer-overlay" id="answer-overlay" role="dialog" aria-modal="true" aria-labelledby="answer-overlay-title" aria-describedby="answer-overlay-message" hidden>
     <div class="answer-overlay-card">
       <div class="answer-overlay-icon" aria-hidden="true">💡</div>
-      <h2 id="answer-overlay-title">Cố lên, thử lại nhé!?</h2>
-      <p id="answer-overlay-message">Không sao, cùng xem đáp án rồi thử sức câu tiếp theo nhé!</p>
-      <button class="answer-overlay-close" id="answer-overlay-close" type="button">Đã hiểu, xem đáp án</button>
+      <h2 id="answer-overlay-title">Cùng xem lại đáp án nhé!</h2>
+      <p id="answer-overlay-message">Mở đáp án để kiểm tra kiến thức của mình nào.</p>
+      <button class="answer-overlay-close" id="answer-overlay-close" type="button">Đã hiểu</button>
     </div>
   </div>
 
@@ -377,35 +377,24 @@
     let advanceTimer = null;
     let returnFocusTo = null;
 
-    // Các câu khịa khi trả lời sai
     const wrongAnswerTaunts = [
-      "Cố lên, thử lại nhé!",
-      "Sai một chút thôi, thử lại nào!",
-      "Chưa trúng rồi, bình tĩnh nhé.",
-      "Đọc kỹ câu hỏi thêm một lần nhé.",
-      "Gần đúng rồi, chọn lại nào.",
-      "Tiếp tục luyện tập để tiến bộ nhé.",
-      "Thử đọc lại dữ kiện rồi chọn lại nhé.",
-      "Đến con lật đật ngã lên ngã xuống còn chọn chuẩn hơn bạn.",
-      "Hỏi thật, từ lúc sinh ra đến giờ bạn đã dùng não lần nào chưa?",
-      "Bào chế thuốc chữa bệnh hay thuốc tống táng người ta thế hả?",
-      "Đọc xong câu này chắc tế bào não của bạn tự vẫn sạch.",
-      "Bằng đại học chắc mua ở cổng trường Đại học Giao thông Vận tải rồi chứ gì?",
-      "Thôi quỳ gối xin lỗi thầy cô đi, đừng cố đấm ăn xôi làm gì nữa.",
-      "Đỉnh cao của sự tối dạ là đây chứ đâu, nể bạn thật sự.",
-      "Chọn thế này thì mai mốt ra trường mở nhà thuốc chắc khách chuồn sạch.",
-      "Học hành kiểu này thì chuẩn bị tinh thần thi lại mòn ghế nhé bạn hiền."
+      "Chưa đúng rồi, mình thử cách khác nhé!",
+      "Đáp án đang trốn kỹ thật 😄 Thử lại nào.",
+      "Suýt trúng rồi! Đọc kỹ câu hỏi thêm một lần nhé.",
+      "Không sao, sai là một bước của ôn tập.",
+      "Phương án này chưa chuẩn, mình còn cơ hội thử lại!",
+      "Não đang khởi động thôi, bình tĩnh chọn lại nhé.",
+      "Đáp án lạc đường rồi! Mình tìm lại nào.",
+      "Đừng vội, để ý từ khóa trong câu nhé.",
+      "Thử lại nhé, bạn sẽ tìm ra đáp án thôi."
     ];
 
-    // Các câu khịa ngay cả khi trả lời... đúng
     const correctAnswerTaunts = [
-      "Đoán mò chuẩn phết nhỉ, chắc hôm nay thắp hương kỹ lắm đây.",
-      "Đúng rồi đấy, nhưng đừng có mà kiêu ngạo, hên thôi bạn ạ.",
-      "Khoanh bừa mà cũng trúng, nhân phẩm dạo này cao thế cơ à?",
-      "Trúng câu này chắc tốn hết cả 3 năm may mắn cuộc đời rồi đấy.",
-      "Đúng rồi đấy, nhưng mặt trông vẫn non và xanh lắm.",
-      "Gặp câu dễ thì hào hứng thế, gặp câu khó xem có khóc thét không.",
-      "Đỉnh cao của sự ăn may là đây chứ đâu, phục sát đất."
+      "Chính xác! Làm tốt lắm!",
+      "Chuẩn rồi, kiến thức vững đó!",
+      "Đúng rồi! Tiếp tục phát huy nhé.",
+      "Tuyệt vời, bạn đã nắm chắc phần này!",
+      "Chính xác! Cùng sang câu tiếp theo nào."
     ];
 
     function openAnswerOverlay(trigger) {
@@ -631,8 +620,8 @@
           }
           render();
           if (!previewed) {
-            document.getElementById("answer-overlay-title").textContent = "Cố lên, thử lại nhé!?";
-            document.getElementById("answer-overlay-message").textContent = "Không sao, cùng xem đáp án rồi thử sức câu tiếp theo nhé!";
+            document.getElementById("answer-overlay-title").textContent = "Cùng xem lại đáp án nhé!";
+            document.getElementById("answer-overlay-message").textContent = "Mở đáp án để kiểm tra kiến thức của mình nào.";
             openAnswerOverlay(document.getElementById("reveal-button"));
           }
         });

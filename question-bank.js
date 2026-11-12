@@ -6,7 +6,8 @@
     { name: "Viên nén", description: "Tá dược, phương pháp dập viên, bao viên và kiểm soát chất lượng." },
     { name: "Hệ tiểu phân micro, nano và liposome", description: "Cấu trúc, thành phần, phương pháp bào chế và ứng dụng." },
     { name: "Thuốc phun mù", description: "Thành phần, chất đẩy, phương pháp đóng thuốc và kiểm soát chất lượng." },
-    { name: "Tương kỵ trong bào chế", description: "Phân loại, cơ chế, ví dụ và biện pháp khắc phục." }
+    { name: "Tương kỵ trong bào chế", description: "Phân loại, cơ chế, ví dụ và biện pháp khắc phục." },
+    { name: "Thuốc mỡ", description: "Các dạng thuốc mềm, tá dược, kỹ thuật bào chế, chất lượng và hấp thu qua da." }
   ];
 
   // Each fact creates a forward and a reverse matching question.
@@ -355,6 +356,77 @@
       ["ví dụ", "Penicillin dùng đường uống", "Một số dạng penicillin bị dịch vị phá hủy; cần lựa chọn dạng/đường dùng phù hợp"],
       ["ví dụ", "Aspirin và vitamin C trong hỗn hợp rắn", "Độ ẩm có thể thúc đẩy phản ứng tương kỵ trong quá trình bảo quản"],
       ["ví dụ", "Chất hấp phụ mạnh trong công thức", "Có thể làm giảm hoạt tính dược chất dù chế phẩm không đổi hình thức"]
+    ],
+    [
+      ["đại cương", "Thuốc mềm dùng trên da và niêm mạc", "Chế phẩm có thể chất mềm, đồng nhất, dùng để gây tác dụng tại chỗ hoặc đưa dược chất thấm qua da và niêm mạc"],
+      ["đại cương", "Năm nhóm thuốc mềm dùng trên da và niêm mạc", "Thuốc mỡ, bột nhão, sáp, kem và gel"],
+      ["đại cương", "Bột nhão (pasta)", "Dạng bán rắn chứa tỷ lệ lớn dược chất rắn không tan trong tá dược, trên 40% theo slide"],
+      ["đại cương", "Kem", "Dạng thuốc mỡ nhũ tương có thể chất mềm, mịn và chứa tỷ lệ lớn chất lỏng"],
+      ["đại cương", "Gel", "Dạng thuốc mềm được bào chế với tá dược tạo gel"],
+      ["đại cương", "Ba phần tối thiểu của hệ trị liệu qua da (TTS)", "Cốt chứa dược chất, nền dính và màng bảo vệ"],
+      ["đại cương", "Thuốc dán tác dụng tại chỗ", "Được dán lên da nhằm tạo tác dụng tại vị trí sử dụng như sát khuẩn, tiêu sưng hoặc giảm đau"],
+      ["đại cương", "Tá dược thuốc mỡ", "Có thể quyết định cấu trúc, thể chất, khả năng thấm và giải phóng dược chất"],
+      ["cấu trúc da", "Ba lớp chính của da", "Thượng bì, trung bì và hạ bì"],
+      ["cấu trúc da", "Lớp sừng", "Gồm khoảng 8–16 lớp tế bào chết keratin hóa và chứa khoảng 15–20% nước theo slide"],
+      ["cấu trúc da", "Hàng rào hấp thu chính của da", "Lớp sừng"],
+      ["cấu trúc da", "Trung bì", "Chứa mạch máu và bạch mạch; dược chất cần đến vùng này để đi vào tuần hoàn"],
+      ["cấu trúc da", "Hạ bì", "Chứa mô mỡ dưới da; dược chất thân dầu có thể bị giữ lại và hấp thu chậm do ái lực với lớp mỡ"],
+      ["cấu trúc da", "Dược chất thân nước qua phần phụ của da", "Có thể đi qua tuyến mồ hôi"],
+      ["cấu trúc da", "Dược chất thân dầu qua phần phụ của da", "Có thể đi qua nang lông"],
+      ["cấu trúc da", "Đường hấp thu qua phần phụ của da", "Có thể hấp thu nhanh hơn qua da nhưng đóng góp không đáng kể ở người theo slide"],
+      ["cấu trúc da", "Da trẻ dưới 9 tháng", "Lớp sừng chưa phát triển đầy đủ nên thuốc có thể hấp thu nhiều hơn và tăng nguy cơ kích ứng hoặc ngộ độc"],
+      ["cấu trúc da", "Da người cao tuổi", "Lớp sừng thường dày và khô hơn, có thể làm giảm hấp thu"],
+      ["cấu trúc da", "Bít kín vùng da dùng thuốc", "Có thể tăng hấp thu do tăng hydrat hóa lớp sừng và lipid"],
+      ["cấu trúc da", "Tăng nhiệt độ tại vùng da dùng thuốc", "Có thể tăng hấp thu nhờ tăng khuếch tán, tăng khe hở liên bào và tăng tưới máu"],
+      ["cấu trúc da", "Bã nhờn trên bề mặt da", "Góp phần duy trì pH bề mặt da khoảng 5 theo slide"],
+      ["tá dược thân dầu", "Dầu, mỡ và sáp", "Có thể làm dịu, bảo vệ và bít kín da, tăng hydrat hóa; một số tá dược giúp dược chất thấm sâu"],
+      ["tá dược thân dầu", "Hạn chế của tá dược dầu-mỡ-sáp", "Có thể trơn nhờn, khó rửa sạch và làm bẩn quần áo"],
+      ["tá dược thân dầu", "Dầu và mỡ thiên nhiên", "Có thể bị ôi khét; chất chống oxy hóa như BHA hoặc BHT có thể được sử dụng"],
+      ["tá dược thân dầu", "Sáp ong", "Có thể dùng để tăng độ cứng của thuốc mỡ"],
+      ["tá dược thân dầu", "Lanolin khan", "Có thể hút khoảng 180–200% nước theo slide và được dùng làm tá dược hút nước"],
+      ["tá dược thân dầu", "Hydrogen hóa dầu-mỡ", "Bão hòa liên kết đôi của acid béo chưa no, làm thay đổi thể chất và giúp giảm mức độ oxy hóa"],
+      ["tá dược thân dầu", "Hydrocarbon dùng làm tá dược", "Có nguồn gốc dầu mỏ, bền hóa học và vi sinh, ít tương tác với dược chất, giá thành thấp"],
+      ["tá dược thân dầu", "Hạn chế của tá dược hydrocarbon", "Hút nước kém, khó thấm và khó rửa sạch"],
+      ["tá dược thân dầu", "Dầu parafin lỏng", "Có thể hòa tan tinh dầu, dầu béo hoặc làm pha dầu trong thuốc mỡ nhũ tương"],
+      ["tá dược thân dầu", "Vaselin", "Có thể chất mềm mịn, nhiệt độ nóng chảy khoảng 38–42°C và hòa tan dược chất thân dầu"],
+      ["tá dược thân dầu", "Parafin rắn", "Có thể dùng để điều chỉnh thể chất thuốc mỡ"],
+      ["tá dược thân dầu", "Acid oleic", "Có thể làm tăng thấm qua da của nhiều dược chất"],
+      ["tá dược thân dầu", "Isopropyl myristat (IPM)", "Là chất lỏng đồng tan với dầu thực vật và có thể làm tăng tính thấm của nhiều dược chất"],
+      ["tá dược thân nước", "Tá dược thân nước", "Có thể hòa tan dược chất thân nước, giải phóng dược chất nhanh và dễ rửa sạch"],
+      ["tá dược thân nước", "Hạn chế của tá dược thân nước", "Có thể ít thấm sâu và dễ bị vi sinh vật xâm nhập"],
+      ["tá dược thân nước", "Natri alginat", "Có thể tạo gel ở nồng độ khoảng 5–10%; gel bền trong khoảng pH 4–10 theo slide"],
+      ["tá dược thân nước", "Dẫn chất cellulose tạo gel", "Thường dùng ở nồng độ khoảng 2–7%, gel bền nhiệt nhưng có thể tương kỵ với muối kim loại nặng và tannin"],
+      ["tá dược thân nước", "Carbopol (carbomer)", "Polymer của acid acrylic, có khả năng tạo gel mạnh ở nồng độ khoảng 0,5–5%"],
+      ["tá dược thân nước", "Triethanolamin trong gel Carbopol", "Có thể trung hòa gel có pH acid và làm tăng độ nhớt"],
+      ["tá dược thân nước", "PEG dùng làm tá dược thuốc mỡ", "PEG 200–400 thường ở dạng lỏng, còn PEG có phân tử lượng trên 2000 thường ở dạng rắn theo slide"],
+      ["tá dược thân nước", "PEG", "Tan trong nước và có thể tăng độ tan dược chất ít tan; tính háo ẩm có thể làm khô da"],
+      ["tá dược thân nước", "PEG và một số thành phần thuốc", "Có thể tương kỵ với phenol và paraben theo slide"],
+      ["tá dược thân nước", "Tá dược nhũ tương khan", "Có sẵn pha dầu và chất nhũ hóa, có thể hút nước để tạo nhũ tương nước trong dầu"],
+      ["tá dược thân nước", "Lanolin khan trong tá dược nhũ tương", "Có thể hút nước và hỗ trợ tạo thuốc mỡ nhũ tương nước trong dầu"],
+      ["tá dược thân nước", "Euserin", "Công thức ví dụ gồm cholesterol và vaselin; có thể hút khoảng 200% nước theo slide"],
+      ["tá dược thân nước", "Tá dược nhũ tương hoàn chỉnh", "Có pha dầu, pha nước và chất nhũ hóa; có thể tạo nhũ tương dầu trong nước hoặc nước trong dầu"],
+      ["tá dược thân nước", "Kem thuốc", "Thường được bào chế với tá dược nhũ tương hoàn chỉnh"],
+      ["tá dược thân nước", "Alcol béo cao phối hợp với chất nhũ hóa", "Có thể tăng khả năng nhũ hóa và độ bền của tá dược nhũ tương"],
+      ["tá dược thân nước", "Lanolin PEG hóa (Solulan)", "Dễ tan trong nước và ethanol, có thể dùng làm tá dược nhũ hóa"],
+      ["kỹ thuật bào chế", "Phương pháp hòa tan", "Áp dụng khi dược chất tan trong tá dược hoặc trong dung môi trung gian thích hợp"],
+      ["kỹ thuật bào chế", "Chuẩn bị tá dược dầu-mỡ-sáp hoặc PEG", "Có thể đun chảy, trộn và lọc; thuốc mỡ tra mắt có thể cần tiệt khuẩn"],
+      ["kỹ thuật bào chế", "Dược chất dễ bay hơi trong phương pháp hòa tan", "Cần hòa tan trong điều kiện kín để hạn chế bay hơi"],
+      ["kỹ thuật bào chế", "Chuẩn bị tá dược gel", "Ngâm hoặc phân tán tá dược để trương nở rồi hòa tan"],
+      ["kỹ thuật bào chế", "Phương pháp trộn đều đơn giản", "Áp dụng khi dược chất rắn không tan trong tá dược, tạo thuốc mỡ dạng hỗn dịch"],
+      ["kỹ thuật bào chế", "Dược chất rắn trong thuốc mỡ", "Cần nghiền mịn, đặc biệt trong thuốc mỡ tra mắt, rồi phối hợp đồng đều với tá dược"],
+      ["kỹ thuật bào chế", "Tạo mỡ đặc rồi pha loãng", "Thêm dần tá dược vào dược chất, trộn thành khối mỡ đặc rồi bổ sung tá dược đến lượng quy định"],
+      ["kỹ thuật bào chế", "Nhũ hóa trực tiếp với tá dược nhũ tương hoàn chỉnh", "Chuẩn bị riêng pha nước và pha dầu, phối hợp hai pha rồi đồng nhất hóa"],
+      ["kỹ thuật bào chế", "Nhiệt độ pha trong nhũ hóa trực tiếp", "Pha nước khoảng 70–75°C và pha dầu khoảng 65–70°C theo slide"],
+      ["chất lượng", "Thuốc mỡ tra mắt", "Không được có tiểu phân kim loại và không có tiểu phân dược chất lớn hơn 75 µm theo slide"],
+      ["chất lượng", "Đánh giá thể chất thuốc mỡ", "Có thể đo điểm nhỏ giọt, điểm đông đặc, độ xuyên sâu, độ dàn mỏng và độ dính"],
+      ["chất lượng", "Đánh giá giải phóng dược chất khỏi thuốc mỡ", "Có thể sử dụng bình khuếch tán"],
+      ["sinh dược học", "Lớp sừng khi dược chất thấm qua da", "Là hàng rào hấp thu chính; dược chất phân cực có thể đi qua vùng tế bào sừng, còn dược chất ít phân cực đi qua lipid liên bào"],
+      ["sinh dược học", "Yếu tố thuộc dược chất ảnh hưởng hấp thu qua da", "Gồm độ tan, kích thước tiểu phân, phân tử lượng, cân bằng dầu-nước và mức độ ion hóa"],
+      ["sinh dược học", "DMSO và DMF dùng tăng hấp thu qua da", "Có thể làm tăng thấm nhưng cần lưu ý nguy cơ độc tính"],
+      ["sinh dược học", "Propylen glycol dùng tăng hấp thu qua da", "Có thể hydrat hóa lớp sừng và hòa tan một số chất tăng thấm khác"],
+      ["sinh dược học", "Chất diện hoạt dùng tăng hấp thu qua da", "Có thể làm tăng thấm; natri dodecyl sulfat có thể gây kích ứng, còn chất diện hoạt không ion hóa thường an toàn hơn theo slide"],
+      ["sinh dược học", "Acid béo như acid oleic", "Có thể làm tăng tính linh động của lipid da và hỗ trợ dược chất thấm qua"],
+      ["sinh dược học", "Cyclodextrin", "Có thể tạo phức lồng với dược chất để tăng độ tan"]
     ]
   ];
 
@@ -372,11 +444,11 @@
 
   const questions = [];
   facts.forEach((chapterFacts, chapterIndex) => {
-    chapterFacts.slice(0, 43).forEach(([category, subject, detail]) => {
-      const peers = chapterFacts.slice(0, 43).filter(fact => fact[0] === category);
+    const selectedFacts = chapterIndex < 7 ? chapterFacts.slice(0, 43) : chapterFacts;
+    selectedFacts.forEach(([category, subject, detail]) => {
+      const peers = selectedFacts.filter(fact => fact[0] === category);
       const answers = [...new Set(peers.map(fact => fact[2]))];
       const subjects = [...new Set(peers.map(fact => fact[1]))];
-      const selectedFacts = chapterFacts.slice(0, 43);
       const answerPool = answers.length >= 4 ? answers : [...new Set(selectedFacts.map(fact => fact[2]))];
       const subjectPool = subjects.length >= 4 ? subjects : [...new Set(selectedFacts.map(fact => fact[1]))];
       const pickOptions = (correct, pool, seed) => {
